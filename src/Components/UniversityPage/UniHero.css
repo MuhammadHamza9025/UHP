@@ -1,0 +1,63 @@
+/* Custom two-tone background */
+.tone-background {
+  background: linear-gradient(115deg, #000000 50%, teal 50%);
+  height: 85vh; /* Adjust height as needed */
+}
+
+/* CSS to style the rotating images */
+.spinner-container {
+  position: relative;
+  width: 250px; /* Adjust as needed */
+  height: 250px;
+  animation: rotate 10s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-image {
+  position: absolute;
+  width: 250px;
+  height: 140px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Adjust each image's position */
+.spinner-image:nth-child(1) {
+  transform: translate(100px, -50px);
+  margin-left: 150px;
+}
+.spinner-image:nth-child(2) {
+  transform: translate(-100px, -50px);
+}
+.spinner-image:nth-child(3) {
+  transform: translate(0, 100px);
+}
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto; /* Adjust height dynamically */
+  max-width: 450px; /* Increased maximum width */
+}
+
+.image-container img {
+  width: 400px; /* Use full width of the container */
+  height: 400px; /* Use full height of the container */
+  object-fit: cover; /* Ensure proper filling */
+  border-radius: 100%; /* Smooth rounded edges */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add a larger shadow */
+}
+
+/* Rotation animation */
+/* @keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
